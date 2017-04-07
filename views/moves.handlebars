@@ -1,0 +1,24 @@
+<table>
+	<thead>
+		<tr>
+			<th style="text-decoration:underline"> Number </th>
+			<th> Name </th>
+			<th> Type I </th>
+			<th> Type II </th>
+			<th> Move </th>
+			<th> Method </th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each data}}
+		<tr>
+			<td> {{this.pid}} </td>
+			<td> {{this.pkname}} </td>
+			<td> {{this.typeI}} </td>
+			<td> {{this.typeII}} </td>
+			<td> {{this.move}} </td>
+			<td> {{this.method}} </td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table

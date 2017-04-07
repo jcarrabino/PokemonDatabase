@@ -1,0 +1,39 @@
+<table id='movesetTable'>
+	<thead>
+		<tr>
+			<th style="text-decoration:underline"> PKMN Name </th>
+			<th> Move Name </th>
+			<th> Method </th>
+            <th> Index </th>
+			<th> Delete Row </th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each data}}
+		<tr>
+			<td> {{this.pkname}} </td>
+			<td> {{this.move}} </td>
+			<td> {{this.method}} </td>
+            <td> {{this.idx}} </td>
+            <td><input type="button" name={{this.idx}} id="pkdataDelete" value="Delete" onclick="deleteRow(this, {{this.idx}})"/></td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+<script>
+function deleteRow(row, id){
+    var req = new XMLHttpRequest();
+    var url = 'http://flip3.engr.oregonstate.edu:5445/movesetDelete?idx=' + id; 
+    req.open('POST', url);
+            var payload ={
+                idx: id
+            };
+            console.log(JSON.stringify(payload));
+            req.send(JSON.stringify(payload)); 
+            event.preventDefault();
+    var i=row.parentNode.parentNode.rowIndex;
+    document.getElementById('movesetTable').deleteRow(i);
+    
+    
+}
+</script>

@@ -1,0 +1,50 @@
+<table id='statsTable'>
+	<thead>
+		<tr>
+			<th style="text-decoration:underline"> Number </th>
+            <th> Name </th>
+			<th> HP </th>
+			<th> Attack </th>
+			<th> Defense </th>
+			<th> Sp. Attack </th>
+			<th> Sp. Defense </th>
+			<th> Speed </th>
+			<th> Total </th>
+			<th> Delete Row </th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each data}}
+		<tr>
+			<td> {{this.fk_pid}} </td>
+			<td> {{this.pkname}} </td>
+			<td> {{this.hp}} </td>
+			<td> {{this.attack}} </td>
+			<td> {{this.defense}} </td>
+			<td> {{this.spattack}} </td>
+			<td> {{this.spdefense}} </td>
+			<td> {{this.speed}} </td>
+			<td> {{this.total}} </td>
+            <td><input type="button" name={{this.fk_pid}} id="statsDelete" value="Delete" onclick="deleteRow(this, {{this.fk_pid}})"/></td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+<script>
+function deleteRow(row, id)
+{
+    var req = new XMLHttpRequest();
+    var url = 'http://flip3.engr.oregonstate.edu:5445/statsDelete?fk_pid=' + id; 
+    req.open('POST', url);
+            var payload ={
+                fk_pid: id
+            };
+            console.log(JSON.stringify(payload));
+            req.send(JSON.stringify(payload)); //send JSON string-formatted object
+            event.preventDefault();
+    var i=row.parentNode.parentNode.rowIndex;
+    document.getElementById('statsTable').deleteRow(i);
+    
+    
+}
+</script>

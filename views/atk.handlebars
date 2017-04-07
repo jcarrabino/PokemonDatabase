@@ -1,0 +1,50 @@
+<table id='atkTable'>
+	<thead>
+		<tr>
+			<th style="text-decoration:underline"> Name </th>
+			<th> Type </th>
+			<th> Category </th>
+			<th> Power </th>
+			<th> Accuracy </th>
+			<th> PP </th>
+			<th> TM # </th>
+			<th> Effect </th>
+			<th> Effect Rate </th>
+			<th> Delete Row </th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each data}}
+		<tr>
+			<td> {{this.mvname}} </td>
+			<td> {{this.atktype}} </td>
+			<td> {{this.cat}} </td>
+			<td> {{this.power}} </td>
+			<td> {{this.acc}} </td>
+			<td> {{this.pp}} </td>
+			<td> {{this.tm}} </td>
+			<td> {{this.effect}} </td>
+			<td> {{this.prob}} </td>
+            <td><input type="button" name={{this.pkmid}} id="pkdataDelete" value="Delete" onclick="deleteRow(this, {{this.pkmid}})"/></td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+<script>
+function deleteRow(row, id)
+{
+    var req = new XMLHttpRequest();
+    var url = 'http://flip3.engr.oregonstate.edu:5445/atkDelete?pkmid=' + id; 
+    req.open('POST', url);
+            var payload ={
+                pkmid: id
+            };
+            console.log(JSON.stringify(payload));
+            req.send(JSON.stringify(payload)); //send JSON string-formatted object
+            event.preventDefault();
+    var i=row.parentNode.parentNode.rowIndex;
+    document.getElementById('atkTable').deleteRow(i);
+    
+    
+}
+</script>

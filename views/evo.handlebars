@@ -1,0 +1,68 @@
+<table id='evoTable'>
+	<thead>
+		<tr>
+			<th style="text-decoration:underline"> PKMN Number </th>
+            <th> Base Form </th>
+			<th> Method </th>
+			<th> Evolution </th>
+			<th> Method Alt 1 </th>
+			<th> Evolution Alt 1 </th>
+			<th> Method Alt 2 </th>
+			<th> Evolution Alt 2 </th>
+			<th> Method Alt 3 </th>
+			<th> Evolution Alt 3 </th>
+			<th> Method Alt 4 </th>
+			<th> Evolution Alt 4 </th>
+			<th> Method Alt 5 </th>
+			<th> Evolution Alt 5 </th>
+			<th> Method Alt 6 </th>
+			<th> Evolution Alt 6 </th>
+			<th> Method Alt 7 </th>
+			<th> Evolution Alt 7 </th>
+			<th> Delete Row </th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each data}}
+		<tr>
+            <td> {{this.fk_pid}} </td>
+			<td> {{this.pid_from_1}} </td>
+			<td> {{this.method_1}} </td>
+			<td> {{this.pid_to_1}} </td>
+			<td> {{this.method_2}} </td>
+			<td> {{this.pid_to_2}} </td>
+			<td> {{this.method_3}} </td>
+			<td> {{this.pid_to_3}} </td>
+			<td> {{this.method_4}} </td>
+			<td> {{this.pid_to_4}} </td>
+			<td> {{this.method_5}} </td>
+			<td> {{this.pid_to_5}} </td>
+			<td> {{this.method_6}} </td>
+			<td> {{this.pid_to_6}} </td>
+			<td> {{this.method_7}} </td>
+			<td> {{this.pid_to_7}} </td>
+			<td> {{this.method_8}} </td>
+			<td> {{this.pid_to_8}} </td>
+            <td><input type="button" name={{this.fk_pid}} id="pkdataDelete" value="Delete" onclick="deleteRow(this, {{this.fk_pid}})"/></td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+<script>
+function deleteRow(row, id)
+{
+    var req = new XMLHttpRequest();
+    var url = 'http://flip3.engr.oregonstate.edu:5445/evoDelete?fk_pid=' + id; 
+    req.open('POST', url);
+            var payload ={
+                fk_pid: id
+            };
+            console.log(JSON.stringify(payload));
+            req.send(JSON.stringify(payload)); //send JSON string-formatted object
+            event.preventDefault();
+    var i=row.parentNode.parentNode.rowIndex;
+    document.getElementById('evoTable').deleteRow(i);
+    
+    
+}
+</script>

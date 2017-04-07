@@ -1,0 +1,30 @@
+<table>
+	<thead>
+		<tr>
+			<th style="text-decoration:underline"> Number </th>
+			<th> Name </th>
+			<th> HP </th>
+			<th> Attack </th>
+			<th> Defense </th>
+			<th> Sp. Attack </th>
+			<th> Sp. Defense </th>
+			<th> Speed </th>
+			<th> Total </th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each data}}
+		<tr>
+			<td> {{this.pid}} </td>
+			<td> {{this.pkname}} </td>
+			<td> {{this.hp}} </td>
+			<td> {{this.attack}} </td>
+			<td> {{this.defense}} </td>
+			<td> {{this.spattack}} </td>
+			<td> {{this.spdefense}} </td>
+			<td> {{this.speed}} </td>
+			<td> {{this.total}} </td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table

@@ -1,0 +1,30 @@
+<table>
+	<thead>
+		<tr>
+			<th style="text-decoration:underline"> Move </th>
+			<th> Method </th>
+			<th> Type </th>
+			<th> Category </th>
+			<th> Power </th>
+			<th> Accuracy </th>
+			<th> Power Points(PP) </th>
+			<th> Effect </th>
+			<th> Effect Rate </th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each data}}
+		<tr>
+			<td> {{this.move}} </td>
+			<td> {{this.method}} </td>
+			<td> {{this.atktype}} </td>
+			<td> {{this.cat}} </td>
+			<td> {{this.power}} </td>
+			<td> {{this.acc}} </td>
+			<td> {{this.pp}} </td>
+			<td> {{this.effect}} </td>
+			<td> {{this.prob}} </td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>

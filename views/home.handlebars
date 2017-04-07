@@ -1,0 +1,392 @@
+<form id="mainForm">
+  <fieldset>
+    <legend>  Add to Pokemon Database </legend>
+    <div class="row">
+        <form>
+          <fieldset>
+            <legend> Insert Pokemon </legend>
+                <label>Number: </label> 
+                <input type="number" name="pid" id="pid" size="30" maxlength="100" >
+                <br>
+                
+                <label>Name: </label> 
+                <input type="text" name="pkname" id="pkname" size="30" maxlength="100" >
+                <br>
+                
+                <label>Type I: </label> 
+                <input type="text" name="typeI" id="typeI" size="30" maxlength="100" >
+                <br>
+                
+                <label>Type II: </label> 
+                <input type="text" id="typeII" name="typeII" size="30" maxlength="100" >
+                <br>
+                
+                <label>Ratio Male: </label> 
+                <input type="number" step="0.01" id="genderM" name="genderM" size="30" maxlength="100" >
+                <br>
+                
+                <label>Ratio Female: </label> 
+                <input type="number" step="0.01" name="genderF" id="genderF" size="30" maxlength="100" >
+                <br>
+
+                <label>Species: </label> 
+                <input type="text" name="species" id="species" size="30" maxlength="100" >
+                <br>
+                
+                <label>Height: </label> 
+                <input type="number" step="0.01" name="height" id="height" size="30" maxlength="100" >
+                <br>
+                
+                <label>Weight: </label> 
+                <input type="number" step="0.01" name="weight" id="weight" size="30" maxlength="100" >
+                <br>
+                
+                <label>Ability I: </label> 
+                <input type="text" name="abilityI" id="abilityI" size="30" maxlength="100" >
+                <br>
+                
+                <label>Ability II: </label> 
+                <input type="text" name="abilityII" id="abilityII" size="30" maxlength="100" >
+                <br>
+
+                <label>Ability III: </label> 
+                <input type="text" name="abilityIII" id="abilityIII" size="30" maxlength="100" >
+                <br>
+                
+                <label>EV Yield: </label> 
+                <input type="text" name="evyield" id="evyield" size="30" maxlength="100" >
+                <br>
+                
+                <label>Capture Rate: </label> 
+                <input type="number" step="0.01" name="capture" id="capture" size="30" maxlength="100" >
+                <br>
+                
+                <label>Base Happiness: </label> 
+                <input type="number" step="0.01" name="basehappy" id="basehappy" size="30" maxlength="100" >
+                <br>
+                
+                <label>Base XP: </label> 
+                <input type="number" step="0.01" name="basexp" id="basexp" size="30" maxlength="100" >
+                <br>
+
+                <label>Growth Rate: </label> 
+                <input type="text" name="growth" id="growth" size="30" maxlength="100" >
+                <br>
+                
+                <label>Egg Steps: </label> 
+                <input type="text" name="eggsteps" id="eggsteps" size="30" maxlength="100" >
+                 <br>
+            <input id="insertPkdata" type="button" name="insertPkdata" value="Insert!" />
+            <input id="updatePkdata" type="button" name="updatePkdata" value="Update!" />
+            </fieldset>
+        </form>
+        </div>
+        <div class="row">
+			<form>
+              <fieldset>
+                <legend> Insert Attack </legend>
+                <label>Move ID Number: </label> 
+                <input type="number" id= "pkmid" name="pkmid" size="30" maxlength="100">
+                <br>                
+                
+                <label>Move Name: </label> 
+                <input type="text" id= "mvname" name="mvname" size="30" maxlength="100">
+                <br>
+
+                <label>Attack Type: </label> 
+                <input type="text" id= "atktype" name="atktype" size="30" maxlength="100" >
+                <br>
+
+                <label>Category: </label> 
+                <input type="text" id= "cat" name="cat" size="30" maxlength="100">
+                <br>
+
+                <label>Power: </label> 
+                <input type="number" id= "power" name="power" size="30" maxlength="100" >
+                <br>
+
+                <label>Accuracy: </label> 
+                <input type="number" id= "acc" name="acc" size="30" maxlength="100" >
+                <br>
+
+                <label>PP: </label> 
+                <input type="number" id= "pp" name="pp" size="30" maxlength="100" >
+                <br>
+
+                <label>TM: </label> 
+                <input type="text" id= "tm" name="tm" size="30" maxlength="100" >
+                <br>
+
+                <label>Effect: </label> 
+                <input type="text" id= "effect" name="effect" size="30" maxlength="100" >
+                <br>
+
+                <label>Effect Rate: </label> 
+                <input type="number" id= "prob" name="prob" size="30" maxlength="100" >
+                <br>
+                <input id="insertAtk" type="button" name="insertAtk" value="Insert!" />
+              </fieldset>
+            </form>
+          </div>
+          
+        <div class="row">
+			<form>
+              <fieldset>
+                <legend> Insert Damage Differential </legend>
+                
+                <label>Number: </label> 
+                <input type="number" id= "fk_did" name="fk_did" size="30" maxlength="100">
+                <br>
+
+                <label>Type I: </label> 
+                <input type="text" id= "typeI" name="typeI" size="30" >
+                <br>
+
+                <label>Type II: </label> 
+                <input type="text" id= "typeII" name="typeII" size="30" >
+                <br>
+
+                <label>Normal: </label> 
+                <input type="number" step="0.01" id= "normal" name="normal" size="30" >
+                <br>
+
+                <label>Fire: </label> 
+                <input type="number" step="0.01" id= "fire" name="fire" size="30" >
+                <br>
+
+                <label>Water: </label> 
+                <input type="number" step="0.01" id= "water" name="water" size="30" >
+                <br>
+
+                <label>Electric: </label> 
+                <input type="number" step="0.01" id= "electric" name="electric" size="30" >
+                <br>
+
+                <label>Grass: </label> 
+                <input type="number" step="0.01" id= "grass" name="grass" size="30" >
+                <br>
+
+                <label>Ice: </label> 
+                <input type="number" step="0.01" id= "ice" name="ice" size="30" >
+                <br>
+
+                <label>Fighting: </label> 
+                <input type="number" step="0.01" id= "fight" name="fight" size="30" >
+                <br>
+
+                <label>Poison: </label> 
+                <input type="number" step="0.01" id= "poison" name="poison" size="30" >
+                <br>
+
+                <label>Ground: </label> 
+                <input type="number" step="0.01" id= "ground" name="ground" size="30" >
+                <br>
+
+                <label>Flying: </label> 
+                <input type="number" step="0.01" id= "flying" name="flying" size="30" >
+                <br>
+
+                <label>Psychic: </label> 
+                <input type="number" step="0.01" id= "psychic" name="psychic" size="30" >
+                <br>
+
+                <label>Bug: </label> 
+                <input type="number" step="0.01" id= "bug" name="bug" size="30" >
+                <br>
+
+                <label>Rock: </label> 
+                <input type="number" step="0.01" id= "rock" name="rock" size="30" >
+                <br>
+
+                <label>Ghost: </label> 
+                <input type="number" step="0.01" id= "ghost" name="ghost" size="30" >
+                <br>
+
+                <label>Dragon: </label> 
+                <input type="number" step="0.01" id= "dragon" name="dragon" size="30" >
+                <br>
+
+                <label>Dark: </label> 
+                <input type="number" step="0.01" id= "dark" name="dark" size="30" >
+                <br>
+
+                <label>Steel: </label> 
+                <input type="number" step="0.01" id= "steel" name="steel" size="30" >
+                <br>
+
+                <label>Fairy: </label> 
+                <input type="number" step="0.01" id= "fairy" name="fairy" size="30" >
+                <br>
+                
+                <input id="insertDmg" type="button" name="insertDmg" value="Insert!" />
+              </fieldset>
+            </form>
+          </div>
+          
+          <div class="row">
+			<form>
+              <fieldset>
+                 <legend> Insert Evolution Chain </legend>
+                
+                <label>Number: </label>  
+                <input type="number" id= "fk_pid" name="fk_pid" size="30" maxlength="100">
+                <br>
+
+                <label>Base Form: </label>  
+                <input type="text" id= "pid_from_1" name="pid_from_1" size="30" >
+                <br>
+
+                <label>Method: </label>  
+                <input type="text" id= "method_1" name="method_1" size="30" >
+                <br>
+
+                <label>Evolution: </label>  
+                <input type="text" id= "pid_to_1" name="pid_to_1" size="30" >
+                <br>
+
+                <label>Method (Alt 1): </label>  
+                <input type="text" id= "method_2" name="method_2" size="30" >
+                <br>
+
+                <label>Evolution (Alt 1): </label>  
+                <input type="text" id= "pid_to_2" name="pid_to_2" size="30" >
+                <br>
+
+                <label>Method (Alt 2): </label>  
+                <input type="text" id= "method_3" name="method_3" size="30" >
+                <br>
+
+                <label>Evolution (Alt 2): </label>  
+                <input type="text" id= "pid_to_3" name="pid_to_3" size="30" >
+                <br>
+
+                <label>Method (Alt 3): </label>  
+                <input type="text" id= "method_4" name="method_4" size="30" >
+                <br>
+
+                <label> Evolution (Alt 3): </label>  
+                <input type="text" id= "pid_to_4" name="pid_to_4" size="30" >
+                <br>
+
+                <label>Method (Alt 4): </label>  
+                <input type="text" id= "method_5" name="method_5" size="30" >
+                <br>
+
+                <label>Evolution (Alt 4): </label>  
+                <input type="text" id= "pid_to_5" name="pid_to_5" size="30" >
+                <br>
+
+                <label>Method (Alt 5): </label>  
+                <input type="text" id= "method_6" name="method_6" size="30" >
+                <br>
+
+                <label>Evolution (Alt 5): </label>  
+                <input type="text" id= "pid_to_6" name="pid_to_6" size="30" >
+                <br>
+
+                <label>Method (Alt 6): </label>  
+                <input type="text" id= "method_7" name="method_7" size="30" >
+                <br>
+
+                <label>Evolution (Alt 6): </label>  
+                <input type="text" id= "pid_to_7" name="pid_to_7" size="30" >
+                <br>
+
+                <label>Method (Alt 7): </label>  
+                <input type="text" id= "method_8" name="method_8" size="30" >
+                <br>
+
+                <label>Evolution (Alt 7): </label>  
+                <input type="text" id= "pid_to_8" name="pid_to_8" size="30" >
+                <br>
+
+                <input id="insertEvo" type="button" name="insertEvo" value="Insert!" />
+                <input id="updateEvo" type="button" name="updateEvo" value="Update!" />
+              </fieldset>
+            </form>
+          </div>
+          
+		<div class="row">
+			<form>
+              <fieldset>
+               <legend> Insert Statistics </legend>
+                
+                <label>PKMN Number: </label> 
+                <input type="number" id= "fk_pid_stats" name="fk_pid" size="30" maxlength="100">
+                <br>
+
+                <label>HP: </label> 
+                <input type="number" id= "hp" name="hp" size="30" maxlength="100">
+                <br>
+
+                <label>Attack: </label> 
+                <input type="number" id= "attack" name="attack" size="30" maxlength="100">
+                <br>
+
+                <label>Defense: </label> 
+                <input type="number" id= "defense" name="defense" size="30" maxlength="100">
+                <br>
+
+                <label>Sp. Attack: </label> 
+                <input type="number" id= "spattack" name="spattack" size="30" maxlength="100">
+                <br>
+
+                <label>Sp. Defense: </label> 
+                <input type="number" id= "spdefense" name="spdefense" size="30" maxlength="100">
+                <br>
+
+                <label>Speed: </label> 
+                <input type="number" id= "speed" name="speed" size="30" maxlength="100">
+                <br>
+
+                <label>Total: </label> 
+                <input type="number" id= "total" name="total" size="30" maxlength="100">
+                <br>
+
+                <label>Stats ID(Unique): </label> 
+                <input type="number" id= "stats_id" name="stats_id" size="30" maxlength="100">
+                <br>
+                
+                
+                <input id="insertStats" type="button" name="insertStats" value="Insert!" />
+              </fieldset>
+            </form>
+          </div>
+         <div class="row">
+			<form>
+              <fieldset>
+                <legend> Insert Moveset </legend>
+                <label> Unique Moveset ID: </label>
+                <input type="number" id= "idx" name="idx" size="30" maxlength="100">
+                <br>
+                
+                <label>Pokemon ID: </label>
+                <input type="number" id= "fk_pid2" name="fk_pid2" size="30" maxlength="100">
+                <br>
+
+                <label>Move ID: </label> 
+                <input type="number" id= "fk_mid" name="fk_mid" size="30" maxlength="100">
+                <br>
+
+                <label>Pokemon Name: </label> 
+                <input type="text" id= "pkname" name="pkname" size="30" maxlength="100">
+                <br>
+
+                <label>Move Name: </label> 
+                <input type="text" id= "move" name="move" size="30" maxlength="100">
+                <br>
+
+                <label>Method Learned: </label> 
+                <input type="text" id= "method" name="method" size="30" maxlength="100">
+                <br>
+                
+                <input id="insertMoveset" type="button" name="insertMoveset" value="Insert!" />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        </fieldset>
+ </form> 
+
+
+  <script type="text/javascript" src="js/home.js"></script>

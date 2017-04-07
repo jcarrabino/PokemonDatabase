@@ -1,0 +1,51 @@
+<table id='pkdataTable'>
+    <thead>
+        <tr>
+            
+            <th style="text-decoration:underline"> Number </th>
+            <th> Name </th>
+            <th> Type I </th>
+            <th> Type II </th>
+            <th> Ratio Male </th>
+            <th> Ratio Female </th>
+            <th> Species </th>
+            <th> Height </th>
+            <th> Weight </th>
+            <th> Delete Row </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td> {{this.pid}} </td>
+            <td> {{this.pkname}} </td>
+            <td> {{this.typeI}} </td>
+            <td> {{this.typeII}} </td>
+            <td> {{this.genderM}} </td>
+            <td> {{this.genderF}} </td>
+            <td> {{this.species}} </td>
+            <td> {{this.height}} </td>
+            <td> {{this.weight}} </td>
+            <td><input type="button" name={{this.pid}} id="pkdataDelete" value="Delete" onclick="deleteRow(this, {{this.pid}})"/></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<script>
+function deleteRow(row, id)
+{
+var req = new XMLHttpRequest();
+var url = 'http://flip3.engr.oregonstate.edu:5445/pkdataDelete?pid=' + id; 
+req.open('POST', url);
+        var payload ={
+            pid: id
+        };
+        console.log(JSON.stringify(payload));
+        req.send(JSON.stringify(payload)); //send JSON string-formatted object
+        event.preventDefault();
+var i=row.parentNode.parentNode.rowIndex;
+document.getElementById('pkdataTable').deleteRow(i);
+
+
+}
+</script>

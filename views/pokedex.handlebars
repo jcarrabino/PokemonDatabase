@@ -1,0 +1,202 @@
+<table id='pkdataTable'>
+	<thead>
+		<tr>
+			<th colspan="20"> {{this.pkmn.name}}'s Data </th>
+		</tr>
+        <tr>
+            <th> Type I </th>
+            <th> Type II </th>
+            <th> Gender Ratio Male </th>
+            <th> Gender Ratio Female </th>
+            <th> Species </th>
+            <th> Height </th>
+            <th> Weight </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td> {{this.typeI}} </td>
+            <td> {{this.typeII}} </td>
+            <td> {{this.genderM}} </td>
+            <td> {{this.genderF}} </td>
+            <td> {{this.species}} </td>
+            <td> {{this.height}} </td>
+            <td> {{this.weight}} </td>
+        </tr>
+        {{/each}}
+	</tbody>
+</table>
+<br/>
+
+<table id='statsTable'>
+	<thead>
+        <tr>
+            <th colspan="7"> {{this.pkmn.name}}'s Stats </th>
+        </tr>
+		<tr>
+			<th> HP </th>
+			<th> Attack </th>
+			<th> Defense </th>
+			<th> Sp. Attack </th>
+			<th> Sp. Defense </th>
+			<th> Speed </th>
+			<th> Total </th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each data}}
+		<tr>
+			<td> {{this.hp}} </td>
+			<td> {{this.attack}} </td>
+			<td> {{this.defense}} </td>
+			<td> {{this.spattack}} </td>
+			<td> {{this.spdefense}} </td>
+			<td> {{this.speed}} </td>
+			<td> {{this.total}} </td>
+        </tr>
+		{{/each}}
+	</tbody>
+</table>
+<br/>
+
+<table>
+	<thead>
+		<tr>
+			<th colspan="20"> {{this.pkmn.name}}'s Damage Taken </th>
+		</tr>
+        <tr>
+			<th> Normal </th>
+			<th> Fire </th>
+			<th> Water </th>
+			<th> Electric </th>
+			<th> Grass </th>
+			<th> Ice </th>
+			<th> Fighting </th>
+			<th> Poison </th>
+			<th> Ground </th>
+			<th> Flying </th>
+			<th> Psychic </th>
+			<th> Bug </th>
+			<th> Rock </th>
+			<th> Ghost </th>
+			<th> Dragon </th>
+			<th> Dark </th>
+			<th> Steel </th>
+			<th> Fairy </th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each data}}
+		<tr>
+			<td> {{this.normal}} </td>
+			<td> {{this.fire}} </td>
+			<td> {{this.water}} </td>
+			<td> {{this.electric}} </td>
+			<td> {{this.grass}} </td>
+			<td> {{this.ice}} </td>
+			<td> {{this.fight}} </td>
+			<td> {{this.poison}} </td>
+			<td> {{this.ground}} </td>
+			<td> {{this.flying}} </td>
+			<td> {{this.psychic}} </td>
+			<td> {{this.bug}} </td>
+			<td> {{this.rock}} </td>
+			<td> {{this.ghost}} </td>
+			<td> {{this.dragon}} </td>
+			<td> {{this.dark}} </td>
+			<td> {{this.steel}} </td>
+			<td> {{this.fairy}} </td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+<br/>
+
+<table>
+	<thead>
+		<tr>
+			<th colspan="19"> {{this.pkmn.name}}'s Evolutions </th>
+		</tr>
+        <tr>
+            <<th> Base Form </th>
+			<th> Method </th>
+			<th> Evo </th>
+			<th> Method Alt 1 </th>
+			<th> Evo Alt 1 </th>
+			<th> Method Alt 2 </th>
+			<th> Evo Alt 2 </th>
+			<th> Method Alt 3 </th>
+			<th> Evo Alt 3 </th>
+			<th> Method Alt 4 </th>
+			<th> Evo Alt 4 </th>
+			<th> Method Alt 5 </th>
+			<th> Evo Alt 5 </th>
+			<th> Method Alt 6 </th>
+			<th> Evo Alt 6 </th>
+			<th> Method Alt 7 </th>
+			<th> Evo Alt 7 </th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each data}}
+		<tr>
+			<td> {{this.pid_from_1}} </td>
+			<td> {{this.method_1}} </td>
+			<td> {{this.pid_to_1}} </td>
+			<td> {{this.method_2}} </td>
+			<td> {{this.pid_to_2}} </td>
+			<td> {{this.method_3}} </td>
+			<td> {{this.pid_to_3}} </td>
+			<td> {{this.method_4}} </td>
+			<td> {{this.pid_to_4}} </td>
+			<td> {{this.method_5}} </td>
+			<td> {{this.pid_to_5}} </td>
+			<td> {{this.method_6}} </td>
+			<td> {{this.pid_to_6}} </td>
+			<td> {{this.method_7}} </td>
+			<td> {{this.pid_to_7}} </td>
+			<td> {{this.method_8}} </td>
+			<td> {{this.pid_to_8}} </td>
+		</tr>
+		{{/each}}
+	</tbody>
+	</tbody>
+</table>
+<br/>
+
+<table>
+	<thead>
+		<tr>
+			<th colspan="9"> {{this.pkmn.name}}'s Moveset </th>
+		</tr>
+        ead>
+		<tr>
+			<th style="text-decoration:underline"> Move </th>
+			<th> Method </th>
+			<th> Type </th>
+			<th> Category </th>
+			<th> Power </th>
+			<th> Accuracy </th>
+			<th> Power Points(PP) </th>
+			<th> Effect </th>
+			<th> Effect Rate </th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each moveset}}
+		<tr>
+			<td> {{this.move}} </td>
+			<td> {{this.method}} </td>
+			<td> {{this.atktype}} </td>
+			<td> {{this.cat}} </td>
+			<td> {{this.power}} </td>
+			<td> {{this.acc}} </td>
+			<td> {{this.pp}} </td>
+			<td> {{this.effect}} </td>
+			<td> {{this.prob}} </td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+<br/>
