@@ -11,7 +11,7 @@ var pool = mysql.createPool({
     connectionLimit : 10,
     host            : 'mysql.cs.orst.edu',
     user            : 'cs340_carrabij',
-    password        : '3446',
+    password        : '****',
     database        : 'cs340_carrabij'
 });
 
